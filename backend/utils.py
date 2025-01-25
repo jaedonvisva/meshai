@@ -4,9 +4,10 @@ import os
 import pymongo
 import PyPDF2
 import json
-
-co = cohere.ClientV2("CvnVgsUc8c8672Iin3zQVtTk0l1mZtaMwtS6aGzH")
-mongo_client = pymongo.MongoClient('mongodb+srv://jaedonvisva2006:Power1010201@cluster.vwnol.mongodb.net/?retryWrites=true&w=majority&appName=cluster')
+COHERE_API = os.getenv("COHERE_API")
+MONGO = os.getenv("MONGO")
+co = cohere.ClientV2(COHERE_API)
+mongo_client = pymongo.MongoClient(MONGO)
 db = mongo_client["mesh"]
 
 
