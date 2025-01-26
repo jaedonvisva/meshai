@@ -22,11 +22,8 @@ def search():
     data = request.json
     search_query = data.get('query', "")
     results = json.loads(search_user(search_query, "University of Waterloo"))
-    return jsonify({
-        "status": "success",
-        "query": search_query,
-        "results": [f"{i}. {results[i]}" for i in range(len(results))]
-    })
+    return results
+
 
 @app.get('/api/all_users')
 def return_all_users():

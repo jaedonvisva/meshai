@@ -4,6 +4,7 @@ import os
 import pymongo
 import PyPDF2
 import json
+
 COHERE_API = os.getenv("COHERE_API")
 MONGO = os.getenv("MONGO")
 co = cohere.ClientV2(COHERE_API)

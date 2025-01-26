@@ -18,7 +18,7 @@ export default function SearchForm() {
 
     try {
       const response = await searchAPI(searchQuery)
-      setResults(response.results)
+      setResults(response)
     } catch (err) {
       setError("Failed to perform search. Please try again.")
     } finally {
@@ -49,7 +49,7 @@ export default function SearchForm() {
           <ul className="space-y-2">
             {results.map((result, index) => (
               <li key={index} className="text-white/90">
-                {result}
+                {result.name}
               </li>
             ))}
           </ul>
