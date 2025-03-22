@@ -23,7 +23,7 @@ interface JsonMeshProps {
 }
 
 const JsonMesh: React.FC<JsonMeshProps> = ({ data }) => {
-  const graphRef = useRef<ForceGraphMethods>()
+  const graphRef = useRef<ForceGraphMethods | undefined>(undefined)
   const graphData = useMemo(() => {
     const nodes = data.map((person) => ({
       id: person._id,
@@ -90,6 +90,8 @@ const JsonMesh: React.FC<JsonMeshProps> = ({ data }) => {
           }
         }}
       />
+      <script>console.log("data", data)</script>
+      
     </div>
   )
 }

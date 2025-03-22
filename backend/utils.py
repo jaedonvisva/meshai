@@ -66,7 +66,7 @@ def search_user(query, school):
     # Convert each user document to a JSON-serializable format
     user_list_serializable = get_users(school)
     user_list_str = [json.dumps(user) for user in user_list_serializable]
-    results = co.rerank(query=query, documents=user_list_str, model='rerank-english-v3.0')
+    results = co.rerank(query=query, documents=user_list_str, model='rerank-english-v3.0', top_n=6)
     hits = [user_list_serializable[hit.index] for hit in results.results]
     
     # Use json.dumps to return the list of JSON objects
