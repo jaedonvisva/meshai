@@ -1,1 +1,1 @@
-A real-time application that uses a webcam to recognize hand gestures and translate them into desktop actions like mouse movement, scrolling, and clicking. It combines OpenCV, Mediapipe, and PyAutoGUI to enable hardware-free interaction with your computer.
+An LLM-powered platform that connects users with collaborators or freelancers by using semantic search and intelligent resume parsing. It leverages Cohere's models and MongoDB to rank and match candidates based on relevance, streamlining the talent discovery process.
